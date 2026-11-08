@@ -1,0 +1,6 @@
+# Link checker config (https://lychee.cli.rs)
+# LinkedIn answers 999 to bots, so accept it instead of failing the build.
+accept = ["200..=299", 999]
+max_retries = 3
+timeout = 20
+include_fragments = "anchor-only"
