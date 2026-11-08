@@ -1,0 +1,121 @@
+/* Blueprint: the CV as a technical drawing. Grid paper, cyanotype photo,
+   numbered sheets, yellow annotations. IBM Plex Mono + IBM Plex Sans. */
+@font-face { font-family: "IBM Plex Sans"; font-weight: 400; font-display: swap; src: url(../fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 600; font-display: swap; src: url(../fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-display: swap; src: url(../fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 600; font-display: swap; src: url(../fonts/ibm-plex-mono-latin-600-normal.woff2) format("woff2"); }
+
+:root, :root:not(#x) {
+  color-scheme: dark;
+  --paper: #0b3a6f;
+  --surface: rgb(255 255 255 / 0.04);
+  --ink: #eaf2ff;
+  --muted: #a9c1e0;
+  --line: rgb(234 242 255 / 0.32);
+  --accent: #ffd23f;
+  --on-accent: #0b3a6f;
+  --grid: rgb(234 242 255 / 0.07);
+  --serif: "IBM Plex Mono", ui-monospace, monospace;
+  --sans: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: light) {
+  :root { --paper: #0b3a6f; --surface: rgb(255 255 255 / 0.04); --ink: #eaf2ff; --muted: #a9c1e0; --line: rgb(234 242 255 / 0.32); --accent: #ffd23f; --on-accent: #0b3a6f; }
+}
+
+body {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(rgb(234 242 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(234 242 255 / 0.035) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-attachment: fixed;
+}
+h1, h2, h3 { font-weight: 600; }
+h1 { font-family: var(--sans); font-size: 2.3rem; letter-spacing: -0.01em; }
+
+/* Cyanotype portrait with registration outline */
+.photo-frame {
+  position: relative;
+  border: 1px solid var(--ink);
+  box-shadow: none;
+  outline: 1px dashed var(--line);
+  outline-offset: 8px;
+  background: var(--paper);
+}
+.photo { filter: grayscale(1) contrast(1.25) brightness(1.05); mix-blend-mode: screen; }
+.photo:hover { filter: grayscale(1) contrast(1.25) brightness(1.05); mix-blend-mode: normal; }
+.photo-frame::after {
+  content: "FIG. 1 — T. BAZÁN";
+  position: absolute;
+  left: 0;
+  bottom: -1.9rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.photo-frame { margin-bottom: 3rem; }
+.headline { color: var(--accent); }
+
+/* Numbered drawing sheets */
+main { counter-reset: sheet; }
+h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid var(--ink);
+  position: relative;
+}
+h2 .icon { display: none; }
+h2::before {
+  counter-increment: sheet;
+  content: counter(sheet, decimal-leading-zero);
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 9px;
+  height: 9px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  transform: rotate(-45deg);
+}
+h3 { font-family: var(--sans); }
+.lede { font-family: var(--sans); font-size: 1.2rem; }
+
+.button { border-radius: 0; }
+.button-alt { color: var(--accent); }
+.social a { border-style: dashed; border-color: var(--line); }
+nav { border-left: 0; }
+nav a::before { content: "→ "; color: var(--accent); opacity: 0; transition: opacity 0.15s ease; }
+nav a:hover::before { opacity: 1; }
+
+.figures { border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); }
+.figures div + div { border-left-style: dashed; }
+.figures dt { color: var(--accent); font-weight: 600; }
+.timeline { border-left-style: dashed; }
+.timeline > .entry::before {
+  left: calc(-1.5rem - 6px);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--accent);
+  box-shadow: inset 0 0 0 2px var(--paper), inset 0 0 0 4px var(--accent);
+}
+ul:not([class]) > li::marker { content: "+  "; color: var(--accent); font-family: var(--mono); }
+
+.tags li { background: transparent; border-style: dashed; color: var(--ink); }
+.panel, .card, .events li { background: var(--surface); border: 1px dashed var(--line); }
+.panel { border-top: 1px solid var(--accent); }
+.card:hover { border-style: solid; border-color: var(--accent); }
+.skills > div { border-bottom-color: var(--line); }

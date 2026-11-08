@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Tomás Bazán · Systems Administrator · DevOps · Linux · Córdoba, Argentina">
+  <title>Tomás Bazán · Systems Administrator · DevOps</title>
+  <link rel="stylesheet" href="/previews/source/style.css?v=7">
+  <link rel="stylesheet" href="theme.css?v=1794147973">
+</head>
+<body>
+  <!-- Icon sprite: hand-drawn strokes plus GitHub, LinkedIn and GitLab marks. -->
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-gitlab" viewBox="0 0 24 24"><path fill="currentColor" d="m23.6 9.593-.033-.086L20.3.98a.851.851 0 0 0-.336-.405.875.875 0 0 0-1 .054.875.875 0 0 0-.29.44L16.47 7.818H7.537L5.333 1.07a.857.857 0 0 0-.29-.441.875.875 0 0 0-1-.054.859.859 0 0 0-.336.405L.433 9.502l-.032.086a6.066 6.066 0 0 0 2.012 7.01l.01.009.03.021 4.977 3.727 2.462 1.863 1.5 1.132a1.009 1.009 0 0 0 1.22 0l1.499-1.132 2.461-1.863 5.006-3.75.013-.01a6.068 6.068 0 0 0 2.01-7.002z"/></symbol>
+    <symbol id="i-gmail" viewBox="0 0 24 24"><path fill="currentColor" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="m3 6 9 7 9-7"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 10c0 5.5-7.5 11.5-7.5 11.5S4.5 15.5 4.5 10a7.5 7.5 0 0 1 15 0z"/><circle cx="12" cy="10" r="2.75"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v12"/><path d="m7 10.5 5 5 5-5"/><path d="M4.5 20.5h15"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8.5 7H17v8.5"/></g></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></g></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8.5 7V5a1.5 1.5 0 0 1 1.5-1.5h4A1.5 1.5 0 0 1 15.5 5v2"/><path d="M3 13h18"/></g></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="7" rx="1"/><rect x="3" y="13.5" width="18" height="7" rx="1"/><path d="M7 7h.01M7 17h.01M11 7h6M11 17h6"/></g></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/><path d="m14 4-4 16"/></g></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 4.5l10 5-10 5z"/><path d="M6 11.5v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9.5v5"/></g></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 12.5 10 5 10-5"/><path d="m2 17 10 5 10-5"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></g></symbol>
+  </svg>
+
+  <div class="layout">
+    <header class="profile">
+      <div class="photo-frame"><img class="photo" src="/site/img/photo.jpg" alt="Portrait of Tomás Bazán" width="480" height="600"></div>
+      <h1>Tomás Bazán</h1>
+      <p class="headline">Systems Administrator<br>DevOps · Linux</p>
+
+      <ul class="facts">
+        <li><svg class="icon" width="18" height="18"><use href="#i-pin"/></svg>Córdoba, Argentina</li>
+        <li><svg class="icon" width="18" height="18"><use href="#i-globe"/></svg>Open to: remote, or hybrid in Córdoba</li>
+      </ul>
+
+      <div class="downloads">
+        <a class="button" href="/site/cv/Tomas-Bazan-CV-EN.pdf" type="application/pdf"><svg class="icon" width="18" height="18"><use href="#i-download"/></svg>CV (PDF)</a>
+      </div>
+
+      <ul class="social">
+        <li><a href="https://github.com/TomasBazan" aria-label="GitHub"><svg class="icon" width="18" height="18"><use href="#i-github"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/bazan-tomas" aria-label="LinkedIn"><svg class="icon" width="18" height="18"><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="https://gitlab.com/tomasbazan5" aria-label="GitLab"><svg class="icon" width="18" height="18"><use href="#i-gitlab"/></svg></a></li>
+        <li><a href="mailto:tomasbazan5@gmail.com" aria-label="Email"><svg class="icon" width="18" height="18"><use href="#i-mail"/></svg></a></li>
+      </ul>
+    </header>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h2><svg class="icon" width="18" height="18"><use href="#i-user"/></svg>About</h2>
+        <p class="lede">
+          Systems administrator at UNC Supercomputing Center (CCAD, Argentina): Slurm
+          configuration, support for the clusters' users, and scientific software
+          deployment with Spack and MPI.
+        </p>
+        <p>
+          ASC26 finalist with Argentina's only student cluster competition team.
+          DevOps diploma (UNC, Craftech, AWS).
+        </p>
+
+        <dl class="figures">
+          <div>
+            <dt>360+</dt>
+            <dd>researchers, PhD and undergraduate students use the CCAD clusters</dd>
+          </div>
+          <div>
+            <dt>288</dt>
+            <dd>nodes in Helvetios, whose installation I took part in</dd>
+          </div>
+          <div>
+            <dt>ASC26</dt>
+            <dd>finalist · Wuxi, China, May 2026</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="experience">
+        <h2><svg class="icon" width="18" height="18"><use href="#i-briefcase"/></svg>Experience</h2>
+
+        <ol class="timeline">
+          <li class="entry">
+            <p class="date">Jun 2025 – Present</p>
+            <h3>Systems Administrator</h3>
+            <p class="org">UNC Supercomputing Center (CCAD-UNC)</p>
+            <ul>
+              <li>Worked on the clusters' Slurm configuration (managed with Ansible):
+                SelectType/SelectTypeParameters, DefMem and memory accounting for the KNL,
+                IVB, BDW and Rome partitions; fixed GPU reporting.</li>
+              <li>Support for the clusters' users (360+ researchers, PhD and undergraduate
+                students): questions and troubleshooting.</li>
+              <li>Installed scientific software with Spack (local repositories, Lmod modules),
+                Docker/Apptainer, Conda/Mamba and Autotools: BEAST, VASP and OpenDroneMap for
+                INTA Salta (Apptainer, then JupyterHub with GPU using an existing Docker image);
+                diagnosed WRF-ELEC and TNT/MPI builds.</li>
+              <li>Debugged MPI issues: MPICH/Open MPI ABI compatibility, launcher/PMI problems,
+                and PMPI tracing to locate the failure in a closed-source binary.</li>
+              <li>Evaluating new tools: croc (data transfer between nodes) and Arbiter3
+                (resource limits on login nodes, in progress).</li>
+              <li>Took part in the installation of Helvetios (288 nodes, 10,368 cores,
+                ~896 TFLOPS peak).</li>
+              <li>Monitored cluster usage with Slurm, Grafana and Python scripts to detect
+                underutilization.</li>
+              <li>Wrote user documentation for the center's wiki (Sphinx/ReadTheDocs).
+                Verified data for the Latin American HPC infrastructure survey presented at
+                CARLA 2026 (SCALAC Council Meeting).</li>
+              <li>Outreach: guided datacenter tours and talks about HPC in Latin America.</li>
+              <li>CARLA 2026 (Córdoba): advisor of a student competition team, then helped
+                organize the competition.</li>
+            </ul>
+            <ul class="tags">
+              <li>Slurm</li><li>Ansible</li><li>Spack</li><li>Lmod</li><li>MPI</li>
+              <li>Apptainer</li><li>Docker</li><li>JupyterHub</li><li>Grafana</li><li>Python</li><li>Sphinx</li>
+            </ul>
+          </li>
+
+          <li class="entry">
+            <p class="date">Jul 2026 – Aug 2026</p>
+            <h3>DevOps</h3>
+            <p class="org">Freelance</p>
+            <ul>
+              <li>Deployed the "Nacional Software" application on a DonWeb VPS, integrating it
+                with the client's existing architecture.</li>
+              <li>Automated deployment and backups with Ansible and added an on-prem server as
+                failover for cloud outages.</li>
+            </ul>
+            <ul class="tags">
+              <li>Ansible</li><li>VPS</li>
+            </ul>
+          </li>
+
+          <li class="entry">
+            <p class="date">Jan 2025 – May 2025</p>
+            <h3>Python Developer</h3>
+            <p class="org">Seenka</p>
+            <ul>
+              <li>Built alerts for faulty broadcast signals with aubio, FFmpeg and Grafana,
+                with Slack notifications.</li>
+              <li>Automated recording gap-filling (Python, Elasticsearch) and signal retuning
+                (Python, PostgreSQL).</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li><li>aubio</li><li>FFmpeg</li><li>Grafana</li><li>Elasticsearch</li><li>PostgreSQL</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section id="competitions">
+        <h2><svg class="icon" width="18" height="18"><use href="#i-server"/></svg>Student cluster competitions</h2>
+        <div class="panel">
+          <p class="date">Nov 2024 – Jun 2026</p>
+          <h3>Team "Carpinchos"</h3>
+          <p class="org">Argentina's only student cluster competition team.</p>
+
+          <ol class="events">
+            <li><span class="event">IndySCC24</span><span class="where">remote</span></li>
+            <li><span class="event">IndySCC25</span><span class="where">on-site at SC25, St. Louis, USA</span></li>
+            <li><span class="event">ASC26 · finalist</span><span class="where">Wuxi, China, May 2026</span></li>
+          </ol>
+
+          <ul>
+            <li>ASC26 finalist (Wuxi, China, May 2026): one of 25 teams out of 300+
+              universities.</li>
+            <li>Owned the team's cluster infrastructure: Terraform for local testing, Ansible
+              for provisioning, BeeGFS and NFS, Slurm.</li>
+            <li>Applications: HPL, ICON, AMSS-NCKU and the IndySCC25 mystery app.</li>
+            <li>Sponsorship campaign: funding from the university, local government and
+              private companies.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2><svg class="icon" width="18" height="18"><use href="#i-code"/></svg>Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <p class="date">Jul 2026 · DevOps diploma</p>
+            <h3>Kubernetes deployment</h3>
+            <p>3 services on Kubernetes: own service with a read-replica database, a service
+              with a Redis sidecar, and a pod discovery service. Per-environment configuration
+              with Kustomize.</p>
+            <ul class="tags"><li>Kubernetes</li><li>Kustomize</li><li>Redis</li></ul>
+          </article>
+
+          <article class="card">
+            <p class="date">Personal</p>
+            <h3>Homelab</h3>
+            <p>Self-hosted services on a home server: Immich photo library and a Minecraft
+              server behind Traefik as reverse proxy, Dozzle for container logs, and remote
+              access over Tailscale.</p>
+            <ul class="tags"><li>Immich</li><li>Traefik</li><li>Tailscale</li><li>Dozzle</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2><svg class="icon" width="18" height="18"><use href="#i-cap"/></svg>Education</h2>
+        <ol class="timeline">
+          <li class="entry">
+            <p class="date">2021 – Present</p>
+            <h3>Computer Analyst · Licenciatura in Computer Science</h3>
+            <p class="org">FaMAF, National University of Córdoba</p>
+            <p>Computer Analyst: final course, Dec 2026. Licenciatura in Computer Science (5-year undergraduate degree): in progress.</p>
+          </li>
+          <li class="entry">
+            <p class="date">Mar 2026 – Oct 2026</p>
+            <h3>DevOps Diploma</h3>
+            <p class="org">UNC, Craftech, AWS</p>
+            <p>Cloud (AWS, Terraform), Kubernetes, Docker, CI/CD, observability and SRE.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="skills">
+        <h2><svg class="icon" width="18" height="18"><use href="#i-layers"/></svg>Skills</h2>
+        <dl class="skills">
+          <div><dt>HPC</dt><dd><ul class="tags"><li>Slurm</li><li>Spack</li><li>Lmod</li><li>MPI (MPICH, Open MPI)</li><li>Apptainer</li><li>BeeGFS</li><li>NFS</li><li>JupyterHub</li><li>HPL</li></ul></dd></div>
+          <div><dt>Systems</dt><dd><ul class="tags"><li>Rocky Linux</li><li>Bash</li><li>Ansible</li><li>Terraform</li></ul></dd></div>
+          <div><dt>Containers &amp; CI/CD</dt><dd><ul class="tags"><li>Docker</li><li>Kubernetes (project)</li><li>Kustomize</li><li>GitLab CI</li><li>GitHub Actions</li></ul></dd></div>
+          <div><dt>Cloud</dt><dd><ul class="tags"><li>AWS (diploma)</li><li>VPS</li></ul></dd></div>
+          <div><dt>Monitoring</dt><dd><ul class="tags"><li>Grafana</li></ul></dd></div>
+          <div><dt>Programming</dt><dd><ul class="tags"><li>Python</li><li>Bash</li><li>JavaScript</li></ul></dd></div>
+          <div><dt>Databases</dt><dd><ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Elasticsearch</li></ul></dd></div>
+          <div><dt>Docs</dt><dd><ul class="tags"><li>Sphinx/ReadTheDocs</li></ul></dd></div>
+        </dl>
+
+        <h3 class="subhead"><svg class="icon" width="18" height="18"><use href="#i-globe"/></svg>Languages</h3>
+        <p>Spanish (native) · English (B2)</p>
+      </section>
+
+      <section id="contact">
+        <h2><svg class="icon" width="18" height="18"><use href="#i-mail"/></svg>Contact</h2>
+        <ul class="links">
+          <li><a href="https://github.com/TomasBazan"><svg class="icon" width="18" height="18"><use href="#i-github"/></svg>github.com/TomasBazan</a></li>
+          <li><a href="https://www.linkedin.com/in/bazan-tomas"><svg class="icon" width="18" height="18"><use href="#i-linkedin"/></svg>linkedin.com/in/bazan-tomas</a></li>
+          <li><a href="https://gitlab.com/tomasbazan5"><svg class="icon" width="18" height="18"><use href="#i-gitlab"/></svg>gitlab.com/tomasbazan5</a></li>
+          <li><a href="mailto:tomasbazan5@gmail.com"><svg class="icon" width="18" height="18"><use href="#i-gmail"/></svg>tomasbazan5@gmail.com</a></li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
