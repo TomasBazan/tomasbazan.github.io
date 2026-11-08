@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tomás Bazán · CV</title>
+<style>
+  @page { size: A4; margin: 12mm 16mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 9pt/1.28 "Liberation Sans", Arial, sans-serif; color: #222; }
+  h1 { font-size: 20pt; margin: 0; }
+  .role { color: #1f4e8c; font-weight: bold; font-size: 11pt; margin: 2pt 0 4pt; }
+  .contact { color: #555; margin: 0; font-size: 8.3pt; }
+  h2 { color: #1f4e8c; font-size: 10.5pt; letter-spacing: 0.06em; text-transform: uppercase;
+       border-bottom: 1px solid #1f4e8c; margin: 9pt 0 3pt; padding-bottom: 1pt; }
+  .row { display: flex; justify-content: space-between; gap: 12pt; font-weight: bold; margin-top: 4pt; }
+  .row span:last-child { font-weight: normal; color: #444; white-space: nowrap; }
+  ul { margin: 2pt 0 0; padding-left: 14pt; }
+  li { margin: 1pt 0; }
+  p { margin: 0; }
+  table { border-collapse: collapse; }
+  td { padding: 1pt 10pt 1pt 0; vertical-align: top; }
+  td:nth-child(odd) { font-weight: bold; white-space: nowrap; }
+</style>
+</head>
+<body>
+<h1>Tomás Bazán</h1>
+<p class="role">Systems Administrator · DevOps · Linux</p>
+<p class="contact">Córdoba, Argentina · tomasbazan5@gmail.com · +54 9 3512815610</p>
+<p class="contact">linkedin.com/in/bazan-tomas · github.com/TomasBazan · gitlab.com/tomasbazan5</p>
+
+<h2>Profile</h2>
+<p>Linux systems administrator at UNC Supercomputing Center (CCAD, Argentina) and freelance DevOps. Configuration
+  management with Ansible, containers (Docker, Apptainer), monitoring with Grafana and CI/CD; support for 360+ users of the
+  center's clusters. DevOps diploma (UNC, Craftech, AWS). ASC26 finalist, in charge of the team's cluster infrastructure.</p>
+
+<h2>Experience</h2>
+<div class="row"><span>Systems Administrator · UNC Supercomputing Center (CCAD-UNC)</span><span>Jun 2025 – Present</span></div>
+<ul>
+  <li>Managed cluster configuration with Ansible: Slurm scheduling, partitions, memory accounting and GPU reporting.</li>
+  <li>User support on Rocky Linux for 360+ researchers, PhD and undergraduate students: troubleshooting and software
+    builds (Spack with Lmod modules, Docker/Apptainer, Conda/Mamba, Autotools).</li>
+  <li>Migrated OpenDroneMap (INTA Salta) from Apptainer to JupyterHub with GPU, reusing an existing Docker image.</li>
+  <li>Debugged MPI issues (MPICH/Open MPI ABI compatibility, launcher/PMI problems) down to a closed-source binary.</li>
+  <li>Took part in the installation of Helvetios (288 nodes, 10,368 cores, ~896 TFLOPS peak).</li>
+  <li>Monitored cluster usage with Grafana and Python scripts to detect underutilization.</li>
+  <li>Docs-as-code for the center's wiki (Sphinx/ReadTheDocs, GitLab).</li>
+</ul>
+<div class="row"><span>Freelance DevOps</span><span>Jul 2026 – Aug 2026</span></div>
+<ul>
+  <li>Deployed an application on a DonWeb VPS, integrated with the client's existing architecture. Automated deployment
+    and backups with Ansible and added an on-prem server as failover for cloud outages.</li>
+</ul>
+<div class="row"><span>Python Developer · Seenka</span><span>Jan 2025 – May 2025</span></div>
+<ul>
+  <li>Built alerts for faulty broadcast signals (aubio, FFmpeg, Grafana, Slack) and automation with Python,
+    PostgreSQL and Elasticsearch.</li>
+</ul>
+
+<h2>HPC team</h2>
+<div class="row"><span>Team “Carpinchos”: Argentina's only student cluster competition team</span><span>Nov 2024 – Jun 2026</span></div>
+<ul>
+  <li><b>ASC26 finalist</b> (Wuxi, China): one of 25 teams out of 300+ universities. Also IndySCC24 and IndySCC25
+    (on-site at SC25, St. Louis, USA).</li>
+  <li>Owned the team's cluster infrastructure: Terraform for local testing, Ansible for provisioning, BeeGFS and NFS, Slurm.</li>
+  <li>Sponsorship campaign: funding from the university, local government and private companies.</li>
+</ul>
+
+<h2>Projects</h2>
+<div class="row"><span>Kubernetes deployment · DevOps diploma</span><span>Jul 2026</span></div>
+<ul>
+  <li>3 services on Kubernetes: own service with a read-replica database, a service with a Redis sidecar, and a pod
+    discovery service. Per-environment configuration with Kustomize.</li>
+</ul>
+<div class="row"><span>Homelab</span><span>Personal</span></div>
+<ul>
+  <li>Self-hosted services: Immich and a Minecraft server behind Traefik as reverse proxy, Dozzle for container logs,
+    remote access over Tailscale.</li>
+</ul>
+
+<h2>Education</h2>
+<div class="row"><span>Computer Analyst degree (final course, Dec 2026) and Licenciatura in Computer Science (5-year degree, in progress) · FaMAF,
+  National University of Córdoba</span><span>2021 – Present</span></div>
+<div class="row"><span>DevOps Diploma · UNC, Craftech, AWS: cloud (AWS, Terraform), Kubernetes, Docker, CI/CD,
+  observability and SRE</span><span>Mar 2026 – Oct 2026</span></div>
+
+<h2>Skills</h2>
+<table>
+  <tr><td>Systems</td><td>Rocky Linux, Bash, Slurm, Spack, MPI, BeeGFS, NFS</td><td>IaC &amp; automation</td><td>Ansible, Terraform, Kustomize</td></tr>
+  <tr><td>Containers</td><td>Docker, Apptainer, Kubernetes (project)</td><td>CI/CD</td><td>GitLab CI, GitHub Actions</td></tr>
+  <tr><td>Cloud</td><td>AWS (diploma), VPS</td><td>Monitoring</td><td>Grafana</td></tr>
+  <tr><td>Languages</td><td>Python, Bash, JavaScript</td><td>Databases</td><td>PostgreSQL, MySQL, MongoDB, Elasticsearch</td></tr>
+</table>
+
+<h2>Languages</h2>
+<p>Spanish (native) · English (B2)</p>
+</body>
+</html>
