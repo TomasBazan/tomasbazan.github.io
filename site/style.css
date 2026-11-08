@@ -108,18 +108,24 @@ svg { flex: none; }
 main { max-width: calc(var(--w) + 2.5rem); margin: 0 auto; padding: 0 1.25rem 5rem; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 4.5rem 0 1rem; }
-.hero-id { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.75rem; }
-.avatar {
-  width: 3.25rem;
-  height: 3.25rem;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 20%;
-  filter: grayscale(1);
-  transition: filter 0.4s ease;
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 15rem;
+  column-gap: 3rem;
+  padding: 4.5rem 0 1rem;
 }
-.avatar:hover { filter: none; }
+.hero > * { grid-column: 1; }
+.hero > .weeks { grid-column: 1 / -1; }
+.portrait {
+  grid-column: 2;
+  grid-row: 1 / span 5;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+  object-fit: cover;
+}
+.hero-id { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.75rem; }
 .eyebrow { margin: 0; font: 0.78rem var(--mono); color: var(--muted); }
 .dot {
   display: inline-block;
@@ -420,7 +426,9 @@ details[open] summary::before { font-size: 0.78rem; content: "− show less"; }
 @media (max-width: 48rem) {
   .topbar nav { display: none; }
   .theme { margin-left: auto; }
-  .hero { padding-top: 2.5rem; }
+  .hero { grid-template-columns: minmax(0, 1fr) 5.5rem; column-gap: 1rem; padding-top: 2.5rem; }
+  .portrait { grid-row: 1 / span 2; align-self: start; border-radius: 0.75rem; }
+  .hero > .role, .hero > .lede, .hero > .actions { grid-column: 1 / -1; }
   .primary { margin-right: 0.25rem; padding: 0.65rem 1rem; }
   .icon-link { width: 2.2rem; height: 2.2rem; }
   .actions { gap: 0.25rem; }
